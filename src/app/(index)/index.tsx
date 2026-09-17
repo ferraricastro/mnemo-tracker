@@ -17,14 +17,14 @@ export default function Index() {
         </TouchableOpacity>
       </View>
 
-      <Category name="Todos" icon="view-list" />
-      <Category name="Anime" icon="movie" />
-      <Category name="Documentário" icon="movie" />
-      <Category name="Filme" icon="movie" />
-      <Category name="HQ" icon="book" />
-      <Category name="Livro" icon="book" />
-      <Category name="Mangá" icon="book" />
-      <Category name="Série" icon="movie" />
+      <Category name="Todos" icon="view-list" isSelected={true} />
+      <Category name="Anime" icon="movie" isSelected={false} />
+      <Category name="Documentário" icon="movie" isSelected={false} />
+      <Category name="Filme" icon="movie" isSelected={false} />
+      <Category name="HQ" icon="book" isSelected={false} />
+      <Category name="Livro" icon="book" isSelected={false} />
+      <Category name="Mangá" icon="book" isSelected={false} />
+      <Category name="Série" icon="movie" isSelected={false} />
     </View>
   )
 }
