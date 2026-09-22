@@ -29,16 +29,21 @@ export const categories: Category[] = [
   },
   {
     id: "5",
+    name: "Jogos",
+    icon: "games",
+  },
+  {
+    id: "6",
     name: "Livros",
     icon: "book",
   },
   {
-    id: "6",
+    id: "7",
     name: "Mangás",
     icon: "book",
   },
   {
-    id: "7",
+    id: "8",
     name: "Séries",
     icon: "movie",
   },
