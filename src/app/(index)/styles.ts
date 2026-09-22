@@ -23,4 +23,13 @@ export const styles = StyleSheet.create({
     height: 32,
     width: 32,
   },
+  trackers: {
+    borderTopWidth: 1,
+    borderTopColor: colors.gray[600],
+  },
+  trackersContent: {
+    gap: 10,
+    padding: 15,
+    paddingBottom: 100,
+  }
 })

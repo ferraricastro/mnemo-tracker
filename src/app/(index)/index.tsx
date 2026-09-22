@@ -1,5 +1,5 @@
 import { MaterialIcons } from "@expo/vector-icons"
-import { Image, TouchableOpacity, View } from "react-native"
+import { FlatList, Image, TouchableOpacity, View } from "react-native"
 
 import { colors } from "@/styles/colors"
 import { styles } from "./styles"
@@ -20,11 +20,19 @@ export default function Index() {
 
       <Categories />
 
-      <Tracker
-        name="One Piece"
-        status="Acompanhando"
-        current="cap. 1193"
-        onDetails={() => console.log("Clicou!")}
+      <FlatList
+        data={["1", "2", "3", "4"]}
+        keyExtractor={(item) => item}
+        renderItem={() => (
+          <Tracker
+            name="One Piece"
+            status="Acompanhando"
+            current="cap. 1193"
+            onDetails={() => console.log("Clicou!")}
+          />
+        )}
+        style={styles.trackers}
+        contentContainerStyle={styles.trackersContent}
       />
     </View>
   )
