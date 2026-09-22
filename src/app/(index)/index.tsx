@@ -24,13 +24,13 @@ export default function Index() {
 
         <TouchableOpacity
           activeOpacity={0.4}
-          onPress={() => router.navigate("/add")}
+          onPress={() => router.navigate("./add")}
         >
           <MaterialIcons name="add" size={32} color={colors.blue[300]} />
         </TouchableOpacity>
       </View>
 
-      <Categories />
+      <Categories showAll />
 
       <FlatList
         data={["1", "2", "3", "4"]}
