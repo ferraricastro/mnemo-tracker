@@ -13,6 +13,7 @@ import { styles } from "./styles"
 
 import { Categories } from "@/components/categories"
 import { Tracker } from "@/components/tracker"
+import { Option } from "@/components/option"
 
 export default function Index() {
   return (
@@ -57,10 +58,13 @@ export default function Index() {
             </View>
 
             <Text style={styles.modalTrackerName}>One Piece</Text>
-
             <Text style={styles.modalStatus}>Acompanhando</Text>
-
             <Text style={styles.modalCurrent}>cap. 1193</Text>
+
+            <View style={styles.modalFooter}>
+              <Option name="Excluir" icon="delete" variant="secondary" />
+              <Option name="Editar" icon="edit" />
+            </View>
           </View>
         </View>
       </Modal>
