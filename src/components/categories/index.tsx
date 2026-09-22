@@ -4,7 +4,11 @@ import { Category } from "@/components/category"
 import { categories } from "@/utils/categories"
 import { styles } from "./styles"
 
-export function Categories() {
+type Props = {
+  showAll?: boolean
+}
+
+export function Categories({ showAll = false }: Props) {
   const filterCategories = [
     {
       id: null,
@@ -13,9 +17,12 @@ export function Categories() {
     },
     ...categories,
   ]
+
+  const data = showAll ? filterCategories : categories
+
   return (
     <FlatList
-      data={filterCategories}
+      data={data}
       keyExtractor={(item) => item.id ?? "all"}
       renderItem={({ item }) => (
         <Category name={item.name} icon={item.icon} isSelected={false} />
