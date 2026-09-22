@@ -1,4 +1,5 @@
 import { MaterialIcons } from "@expo/vector-icons"
+import { router } from "expo-router"
 import {
   FlatList,
   Image,
@@ -12,8 +13,8 @@ import { colors } from "@/styles/colors"
 import { styles } from "./styles"
 
 import { Categories } from "@/components/categories"
-import { Tracker } from "@/components/tracker"
 import { Option } from "@/components/option"
+import { Tracker } from "@/components/tracker"
 
 export default function Index() {
   return (
@@ -21,7 +22,10 @@ export default function Index() {
       <View style={styles.header}>
         <Image source={require("@/assets/logo.png")} style={styles.logo} />
 
-        <TouchableOpacity activeOpacity={0.4}>
+        <TouchableOpacity
+          activeOpacity={0.4}
+          onPress={() => router.navigate("/add")}
+        >
           <MaterialIcons name="add" size={32} color={colors.blue[300]} />
         </TouchableOpacity>
       </View>
@@ -43,7 +47,7 @@ export default function Index() {
         contentContainerStyle={styles.trackersContent}
       />
 
-      <Modal transparent visible={true}>
+      <Modal transparent visible={false}>
         <View style={styles.modal}>
           <View style={styles.modalContent}>
             <View style={styles.modalHeader}>
