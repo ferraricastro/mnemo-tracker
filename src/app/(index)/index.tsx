@@ -1,5 +1,12 @@
 import { MaterialIcons } from "@expo/vector-icons"
-import { FlatList, Image, TouchableOpacity, View } from "react-native"
+import {
+  FlatList,
+  Image,
+  Modal,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native"
 
 import { colors } from "@/styles/colors"
 import { styles } from "./styles"
@@ -34,6 +41,29 @@ export default function Index() {
         style={styles.trackers}
         contentContainerStyle={styles.trackersContent}
       />
+
+      <Modal transparent visible={true}>
+        <View style={styles.modal}>
+          <View style={styles.modalContent}>
+            <View style={styles.modalHeader}>
+              <Text style={styles.modalCategory}>Mangá</Text>
+              <TouchableOpacity>
+                <MaterialIcons
+                  name="close"
+                  size={20}
+                  color={colors.gray[400]}
+                />
+              </TouchableOpacity>
+            </View>
+
+            <Text style={styles.modalTrackerName}>One Piece</Text>
+
+            <Text style={styles.modalStatus}>Acompanhando</Text>
+
+            <Text style={styles.modalCurrent}>cap. 1193</Text>
+          </View>
+        </View>
+      </Modal>
     </View>
   )
 }
