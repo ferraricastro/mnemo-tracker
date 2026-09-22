@@ -22,5 +22,5 @@ export const styles = StyleSheet.create({
     color: colors.gray[400],
     fontSize: 14,
     paddingHorizontal: 24,
-  }
+  },
 })
