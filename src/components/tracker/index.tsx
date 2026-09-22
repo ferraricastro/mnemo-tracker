@@ -29,7 +29,7 @@ export function Tracker({ name, status, current, onDetails }: Props) {
       </View>
 
       <TouchableOpacity onPress={onDetails}>
-        <MaterialIcons name="more-horiz" size={30} color={colors.gray[400]} />
+        <MaterialIcons name="more-horiz" size={25} color={colors.gray[400]} />
 
       </TouchableOpacity>
     </View>
