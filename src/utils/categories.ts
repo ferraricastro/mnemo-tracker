@@ -9,37 +9,37 @@ type Category = {
 export const categories: Category[] = [
   {
     id: "1",
-    name: "Anime",
+    name: "Animes",
     icon: "movie",
   },
   {
     id: "2",
-    name: "Documentário",
+    name: "Documentários",
     icon: "movie",
   },
   {
     id: "3",
-    name: "Filme",
+    name: "Filmes",
     icon: "movie",
   },
   {
     id: "4",
-    name: "HQ",
+    name: "HQs",
     icon: "book",
   },
   {
     id: "5",
-    name: "Livro",
+    name: "Livros",
     icon: "book",
   },
   {
     id: "6",
-    name: "Mangá",
+    name: "Mangás",
     icon: "book",
   },
   {
     id: "7",
-    name: "Série",
+    name: "Séries",
     icon: "movie",
   },
 ]
