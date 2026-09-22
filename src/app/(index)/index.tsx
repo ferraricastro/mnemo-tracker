@@ -5,6 +5,7 @@ import { colors } from "@/styles/colors"
 import { styles } from "./styles"
 
 import { Categories } from "@/components/categories"
+import { Tracker } from "@/components/tracker"
 
 export default function Index() {
   return (
@@ -18,6 +19,13 @@ export default function Index() {
       </View>
 
       <Categories />
+
+      <Tracker
+        name="One Piece"
+        status="Acompanhando"
+        current="cap. 1193"
+        onDetails={() => console.log("Clicou!")}
+      />
     </View>
   )
 }
