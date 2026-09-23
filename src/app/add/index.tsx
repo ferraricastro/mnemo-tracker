@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { MaterialIcons } from "@expo/vector-icons"
 import { router } from "expo-router"
 import { Text, TouchableOpacity, View } from "react-native"
@@ -5,11 +6,19 @@ import { Text, TouchableOpacity, View } from "react-native"
 import { colors } from "@/styles/colors"
 import { styles } from "./styles"
 
+import { Button } from "@/components/button"
 import { Categories } from "@/components/categories"
 import { Input } from "@/components/input"
-import { Button } from "@/components/button"
 
 export default function Add() {
+  const [name, setName] = useState("")
+  const [status, setStatus] = useState("")
+  const [current, setCurrent] = useState("")
+
+  function handleAdd(){
+
+  }
+  
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -24,10 +33,10 @@ export default function Add() {
       <Categories />
 
       <View style={styles.form}>
-        <Input placeholder="Nome" />
-        <Input placeholder="Status" />
-        <Input placeholder="Último lido/assistido" />
-        <Button title="Adicionar" />
+        <Input placeholder="Nome" onChangeText={setName} autoCorrect={false} />
+        <Input placeholder="Status" onChangeText={setStatus} />
+        <Input placeholder="Último lido/assistido" onChangeText={setCurrent} />
+        <Button title="Adicionar" onPress={handleAdd}/>
       </View>
     </View>
   )
