@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { MaterialIcons } from "@expo/vector-icons"
 import { router } from "expo-router"
-import { Text, TouchableOpacity, View } from "react-native"
+import { Text, TouchableOpacity, View, Alert } from "react-native"
 
 import { colors } from "@/styles/colors"
 import { styles } from "./styles"
@@ -17,7 +17,19 @@ export default function Add() {
   const [current, setCurrent] = useState("")
 
   function handleAdd(){
+    if(!category){
+      return Alert.alert("Categoria", "Selecione a categoria")
+    }
 
+    if (!name.trim()) {
+      return Alert.alert("Nome", "Informe o nome")
+    }
+
+    if (!status.trim()) {
+      return Alert.alert("Status", "Informe o status")
+    }
+
+    console.log({ category, name, status, current })
   }
   
   return (
