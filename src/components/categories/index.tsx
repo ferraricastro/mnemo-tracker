@@ -6,9 +6,11 @@ import { styles } from "./styles"
 
 type Props = {
   showAll?: boolean
+  selected: string
+  onChange: (category: string) => void
 }
 
-export function Categories({ showAll = false }: Props) {
+export function Categories({ showAll = false, selected, onChange }: Props) {
   const filterCategories = [
     {
       id: null,
@@ -25,7 +27,12 @@ export function Categories({ showAll = false }: Props) {
       data={data}
       keyExtractor={(item) => item.id ?? "all"}
       renderItem={({ item }) => (
-        <Category name={item.name} icon={item.icon} isSelected={false} />
+        <Category
+          name={item.name}
+          icon={item.icon}
+          isSelected={item.name === selected}
+          onPress={() => onChange(item.name)}
+        />
       )}
       horizontal
       style={styles.container}

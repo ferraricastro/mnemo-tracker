@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { MaterialIcons } from "@expo/vector-icons"
 import { router } from "expo-router"
 import {
@@ -16,7 +17,11 @@ import { Categories } from "@/components/categories"
 import { Option } from "@/components/option"
 import { Tracker } from "@/components/tracker"
 
+const FILTER_ALL = "Todos"
+
 export default function Index() {
+  const [category, setCategory] = useState(FILTER_ALL)
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -30,7 +35,7 @@ export default function Index() {
         </TouchableOpacity>
       </View>
 
-      <Categories showAll />
+      <Categories showAll onChange={setCategory} selected={category} />
 
       <FlatList
         data={["1", "2", "3", "4"]}

@@ -11,6 +11,7 @@ import { Categories } from "@/components/categories"
 import { Input } from "@/components/input"
 
 export default function Add() {
+  const [category, setCategory] = useState("")
   const [name, setName] = useState("")
   const [status, setStatus] = useState("")
   const [current, setCurrent] = useState("")
@@ -30,7 +31,7 @@ export default function Add() {
       </View>
 
       <Text style={styles.lable}>Selecione uma categoria</Text>
-      <Categories />
+      <Categories onChange={setCategory} selected={category} />
 
       <View style={styles.form}>
         <Input placeholder="Nome" onChangeText={setName} autoCorrect={false} />
